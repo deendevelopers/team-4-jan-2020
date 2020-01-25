@@ -14,6 +14,9 @@ export default class NavBar extends preact.Component {
                     <li className={`view-profile${(selected == 'profile') ? ' is-selected' : ''}`}>
                         <a onClick={() => ViewService.open('Profile')}><Icon name="user" /></a>
                     </li>
+                    <li>
+                        <a onClick={() => ViewService.open('Event')}><Icon name="user" /></a>
+                    </li>
                 </ul>
             </nav>
         );

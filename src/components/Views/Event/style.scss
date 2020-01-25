@@ -1,0 +1,33 @@
+
+.event-page {
+    text-align: center;
+
+    // TODO make responsive rem
+    &__poster {
+        width: 300px;
+        height: 300px;
+    }
+
+    &__core-details {
+        //display: flex;
+        //justify-content: space-evenly;
+    }
+
+    &__attendees {
+        margin: 20px 0px;
+    }
+
+    &__description {
+        margin: 20px 0px;
+    }
+
+    &__discussion {
+        margin: 30px 0px;
+    }
+
+    &__comment {
+        text-align: left;
+        margin: 0px 20px;
+    }
+
+}
