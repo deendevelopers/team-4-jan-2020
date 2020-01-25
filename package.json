@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.18.1",
     "fastclick": "^1.0.6",
     "feather-icons": "^4.4.0",
     "linkstate": "^1.1.0",
