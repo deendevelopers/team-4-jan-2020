@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="app.website"
+    version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:gap="http://phonegap.com/ns/1.0"
+>
+
+    <name>App Name</name>
+    <description>App Description</description>
+    <author email="app@email.com" href="https://website.com">Author Name</author>
+    <content src="index.html" />
+
+    <!-- Default preferences -->
+
+    <icon src="icon.png" />
+
+    <!-- iOS specific configuration -->
+
+    <platform name="ios">
+        <preference name="orientation" value="portrait" />
+        <preference name="deployment-target" value="10.0" />
+        <splash src="res/ios/Default@2x~universal~anyany.png" />
+        <icon src="res/ios/Icon-App-20x20@2x.png" height="40" width="40" />
+        <icon src="res/ios/Icon-App-20x20@3x.png" height="60" width="60" />
+        <icon src="res/ios/Icon-App-29x29@1x.png" height="29" width="29" />
+        <icon src="res/ios/Icon-App-29x29@2x.png" height="58" width="58" />
+        <icon src="res/ios/Icon-App-29x29@3x.png" height="87" width="87" />
+        <icon src="res/ios/Icon-App-40x40@1x.png" height="40" width="40" />
+        <icon src="res/ios/Icon-App-40x40@2x.png" height="80" width="80" />
+        <icon src="res/ios/Icon-App-40x40@3x.png" height="120" width="120" />
+        <icon src="res/ios/Icon-App-57x57@1x.png" height="57" width="57" />
+        <icon src="res/ios/Icon-App-57x57@2x.png" height="114" width="114" />
+        <icon src="res/ios/Icon-App-60x60@1x.png" height="60" width="60" />
+        <icon src="res/ios/Icon-App-60x60@2x.png" height="120" width="120" />
+        <icon src="res/ios/Icon-App-60x60@3x.png" height="180" width="180" />
+        <icon src="res/ios/Icon-App-76x76@1x.png" height="76" width="76" />
+        <icon src="res/ios/Icon-App-20x20@1x.png" height="20" width="20" />
+        <icon src="res/ios/Icon-App-20x20@2x.png" height="40" width="40" />
+        <icon src="res/ios/Icon-App-29x29@1x.png" height="29" width="29" />
+        <icon src="res/ios/Icon-App-29x29@2x.png" height="58" width="58" />
+        <icon src="res/ios/Icon-App-40x40@1x.png" height="40" width="40" />
+        <icon src="res/ios/Icon-App-40x40@2x.png" height="80" width="80" />
+        <icon src="res/ios/Icon-Small-50x50@1x.png" height="50" width="50" />
+        <icon src="res/ios/Icon-Small-50x50@2x.png" height="100" width="100" />
+        <icon src="res/ios/Icon-App-72x72@1x.png" height="72" width="72" />
+        <icon src="res/ios/Icon-App-72x72@2x.png" height="144" width="144" />
+        <icon src="res/ios/Icon-App-76x76@1x.png" height="76" width="76" />
+        <icon src="res/ios/Icon-App-76x76@2x.png" height="152" width="152" />
+        <icon src="res/ios/Icon-App-76x76@3x.png" height="228" width="228" />
+        <icon src="res/ios/Icon-App-83.5x83.5@2x.png" height="167" width="167" />
+        <icon src="res/ios/Icon-App-1024x1024@1x.png" height="1024" width="1024" />
+    </platform>
+
+    <!-- Android specific configuration -->
+
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="28" />
+        <preference name="loadUrlTimeoutValue" value="700000" />
+        <icon src="res/android/ldpi.png" density="ldpi" />
+        <icon src="res/android/mdpi.png" density="mdpi" />
+        <icon src="res/android/hdpi.png" density="hdpi" />
+        <icon src="res/android/xhdpi.png" density="xhdpi" />
+        <icon src="res/android/xxhdpi.png" density="xxhdpi" />
+        <icon src="res/android/xxxhdpi.png" density="xxxhdpi" />
+    </platform>
+
+    <!-- Cordova plugins -->
+
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-whitelist" />
+    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-dialogs" />
+    <!-- <plugin name="cordova-plugin-geolocation" /> -->
+    <!-- <plugin name="cordova-plugin-inappbrowser" /> -->
+    <!-- <plugin name="cordova-plugin-file-transfer" /> -->
+    <!-- <plugin name="cordova-plugin-camera" /> -->
+    <!-- <plugin name="cordova-plugin-statusbar" /> -->
+    <!-- <plugin name="onesignal-cordova-plugin" source="npm" /> -->
+    <!-- <plugin name="cordova-plugin-app-version" source="npm" /> -->
+    <!-- <plugin name="cordova-plugin-badge" source="npm" /> -->
+    <!-- <plugin name="cordova-plugin-customurlscheme" source="npm">
+        <variable name="URL_SCHEME" value="appslug" />
+    </plugin> -->
+
+    <!-- System -->
+
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+
+    <!-- Build -->
+
+    <preference name="phonegap-version" value="cli-9.0.0" />
+    <preference name="android-build-tool" value="gradle" />
+
+    <!-- Access to domains -->
+
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <access origin="http://127.0.0.1*"/>
+    <access origin="https://website.com/*" />
+    <allow-navigation href="*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="tel:*" />
+
+    <!-- iOS specific (info.plist) -->
+
+    <!-- <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+        <string>The description for camera usage/permission</string>
+    </edit-config>
+    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+        <string>The description for getting photos from gallery</string>
+    </edit-config>
+    <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+        <string>The description for saving photos from gallery</string>
+    </edit-config>
+    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+        <string>The description for geolocation permission</string>
+    </edit-config> -->
+
+</widget>

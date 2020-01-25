@@ -1,0 +1,78 @@
+
+// Fade element in from the right
+
+@keyframes fade-in-right {
+
+    from {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+// Fade element in from the bottom
+
+@keyframes fade-in-bottom {
+
+    from {
+        opacity: 0;
+        transform: translateY(100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+// Fade element in from the bottom
+
+@keyframes fade-in-up {
+
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+// Rotate the element
+
+@keyframes rotate {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.animate {
+
+    &-fade-in-right {
+        animation: fade-in-right $animation-speed forwards;
+    }
+
+    &-fade-in-bottom {
+        animation: fade-in-bottom $animation-speed forwards;
+    }
+
+    &-fade-in-up {
+        animation: fade-in-up $animation-speed forwards;
+    }
+
+    &-rotate {
+        animation: rotate $animation-speed forwards;
+    }
+
+}

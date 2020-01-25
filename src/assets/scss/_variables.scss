@@ -1,0 +1,36 @@
+
+// Breakpoints
+
+$mq-breakpoints: (
+    mobile: 360px,
+    mobileLarge: 480px,
+    tablet: 768px,
+    desktop: 1024px,
+    wide: 1200px
+);
+
+// Colours
+
+$color-white: #fff;
+$color-black: #000;
+$color-shadow: rgba(0, 0, 0, 0.5);
+$color-shadow-light: rgba(0, 0, 0, 0.25);
+$color-shadow-lighter: rgba(0, 0, 0, 0.15);
+
+// Fonts
+
+$font-stack-default: 'Overpass', Helvetica, sans-serif;
+$font-color-default: $color-black;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Structure
+
+$structure-margin: pxrem(25px);
+$structure-border-radius: pxrem(5px);
+
+// Animations and transitions
+
+$transition-speed: 0.5s;
+$animation-speed: 0.5s;

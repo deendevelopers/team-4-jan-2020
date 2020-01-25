@@ -1,0 +1,67 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/functions';
+
+.navbar {
+
+    background-color: $color-white;
+    box-shadow: 0 0 pxrem(10px) $color-shadow-light;
+    height: pxrem(50px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+
+    ul {
+
+        margin: 0;
+        padding: 0;
+
+        li {
+
+            list-style-type: none;
+            text-align: center;
+            position: relative;
+            float: left;
+            width: 25%;
+
+            a {
+
+                height: pxrem(50px);
+                display: block;
+                width: 100%;
+                cursor: pointer;
+
+                .feather-icon svg {
+                    margin-top: pxrem(11px);
+                    height: pxrem(28px);
+                    width: pxrem(28px);
+                    stroke-width: 1.5;
+                }
+
+            }
+
+            a:hover svg,
+            &.is-selected a .feather-icon svg {
+                stroke-width: 2.5;
+            }
+
+            &[data-badge]::before {
+                content: attr(data-badge);
+                display: inline-block;
+                border-radius: 100%;
+                color: $color-white;
+                position: absolute;
+                top: pxrem(5px);
+                left: 50%;
+                height: pxrem(20px);
+                width: pxrem(20px);
+                margin-left: pxrem(2px);
+            }
+
+        }
+
+    }
+
+}

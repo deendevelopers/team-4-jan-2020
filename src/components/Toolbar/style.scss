@@ -1,0 +1,116 @@
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/variables';
+@import '../../assets/scss/functions';
+
+.toolbar {
+
+    $parent: &;
+
+    background-color: $color-white;
+    height: pxrem(55px);
+    height: calc(#{pxrem(55px)} + constant(safe-area-inset-top));
+    height: calc(#{pxrem(55px)} + env(safe-area-inset-top));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+
+    &--border {
+        height: pxrem(54px);
+    }
+
+    &__left,
+    &__middle,
+    &__right {
+        float: left;
+        height: 100%;
+    }
+
+    &__left,
+    &__right {
+        width: 25%;
+    }
+
+    &__left {
+
+        text-align: left;
+
+        span {
+            left: pxrem(15px);
+        }
+
+        #{$parent}__menu {
+            left: 0;
+        }
+
+    }
+
+    &__right {
+
+        text-align: right;
+
+        span {
+            right: pxrem(15px);
+        }
+
+        #{$parent}__menu {
+            right: 0;
+        }
+
+    }
+
+    &__middle {
+
+        @include ellipsis;
+        font-size: pxrem(16px);
+        text-align: center;
+        position: relative;
+        width: 50%;
+
+        span {
+            display: inline-block;
+            position: absolute;
+            transform: translateX(-50%);
+            height: pxrem(28px);
+            bottom: pxrem(10px);
+            left: 50%;
+        }
+
+        &--logo {
+
+            span {
+                bottom: pxrem(13px);
+            }
+
+            svg {
+                height: pxrem(28px);
+                width: pxrem(108px);
+            }
+
+        }
+
+    }
+
+    a {
+
+        height: 100%;
+        display: block;
+        position: relative;
+
+        span {
+            height: pxrem(26px);
+            position: absolute;
+            bottom: pxrem(13px);
+        }
+
+        svg {
+            pointer-events: none;
+            height: pxrem(24px);
+            width: pxrem(24px);
+            stroke-width: 2;
+        }
+
+    }
+
+}

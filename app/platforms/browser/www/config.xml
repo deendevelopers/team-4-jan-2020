@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.website.app" version="1.0.0" versionCode="1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>Arilly</name>
+    <description>Find local bakers, make-up artists, photographers and other professionals</description>
+    <author email="hello@arilly.com" href="https://arilly.com">Arilly Limited</author>
+    <content src="index.html" />
+    <access origin="http://127.0.0.1*" />
+    <access origin="https://website.com" />
+    <access origin="https://googleapis.com" subdomains="true" />
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#ffffff" />
+</widget>

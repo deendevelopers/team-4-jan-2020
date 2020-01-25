@@ -1,0 +1,38 @@
+@import '../../../assets/scss/functions';
+@import '../../../assets/scss/variables';
+
+.nointernet {
+
+    text-align: center;
+
+    &__message {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        width: 80%;
+
+        .feather-icon {
+
+            margin-bottom: pxrem(20px);
+
+            svg {
+                height: pxrem(100px);
+                width: pxrem(100px);
+            }
+
+        }
+
+        h2 {
+            font-size: pxrem(20px);
+            margin: 0 0 pxrem(10px) 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+    }
+
+}

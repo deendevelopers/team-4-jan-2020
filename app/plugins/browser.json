@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.website.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.website.app"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.website.app"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.website.app"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.website.app"
+        },
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "com.website.app"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.website.app"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.website.app"
+        }
+    }
+}

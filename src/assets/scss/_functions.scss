@@ -1,0 +1,7 @@
+
+// Convert px to rem
+
+@function pxrem($value) {
+    $size: $value / 10px;
+    @return #{$size}rem;
+}

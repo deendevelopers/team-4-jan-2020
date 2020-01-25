@@ -1,0 +1,37 @@
+@import '../../assets/scss/functions';
+@import '../../assets/scss/variables';
+
+.loading {
+
+    animation: rotate 1.5s forwards linear infinite;
+    display: inline-block;
+    line-height: 0;
+
+    svg {
+        height: pxrem(32px);
+        width: pxrem(32px);
+    }
+
+    &--block {
+        display: block;
+        text-align: center;
+        margin: pxrem(20px) 0;
+    }
+
+    &--small svg {
+        height: pxrem(16px);
+        width: pxrem(16px);
+    }
+
+    &--large svg {
+        height: pxrem(64px);
+        width: pxrem(64px);
+    }
+
+    &--full {
+        padding: pxrem(50px);
+        text-align: center;
+        display: block;
+    }
+
+}
