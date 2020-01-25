@@ -50,7 +50,7 @@
     "url-loader": "^0.5.7",
     "webpack": "^3.5.5",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^3.1.11"
   },
   "scripts": {
     "test": "NODE_ENV='test' mocha tests --compilers js:babel-core/register --timeout 10000",
