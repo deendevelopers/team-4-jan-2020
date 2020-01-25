@@ -23,6 +23,11 @@ html {
 
 }
 
+body {
+    font-size: pxrem(14px);
+    line-height: 1.5;
+}
+
 a, button {
     outline: 0 none;
 }
