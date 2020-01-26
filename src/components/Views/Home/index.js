@@ -80,7 +80,7 @@ export default class Home extends BaseViewComponent {
                         <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                 </div>
-                <NavBar selected="home" />
+                <NavBar selected={id} />
             </div>
         );
     }
