@@ -1,4 +1,5 @@
 @import '../../assets/scss/functions';
+@import '../../assets/scss/variables';
 
 .list {
 
@@ -13,7 +14,19 @@
     }
 
     &__title {
+
         font-size: pxrem(16px);
+
+        &--unread:before {
+            content: "";
+            background-color: $color-gray-700;
+            border-radius: 100%;
+            display: inline-block;
+            height: pxrem(10px);
+            width: pxrem(10px);
+            margin-right: pxrem(5px);
+        }
+
     }
 
 }
