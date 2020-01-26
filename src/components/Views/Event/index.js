@@ -79,7 +79,7 @@ export default class Event extends BaseViewComponent {
                         </div>
 
                         <div className="event-page__organiser-header">
-                            <span onClick={() => this.openOrganiserPage()} className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4"><u>{eventDetails.organiser}</u></span>
+                            <span onClick={() => this.openOrganiserPage()} className="home__subtitle h5 text-uppercase text-primary mb-3 mx-4"><u>{eventDetails.organiser}</u></span>
                             <button onClick={() => this.follow()}  type="button" className="btn btn-primary event-page__follow-organisation">{ following ? 'Follow ' : 'Following ' }
                             <Icon className="event-page__follow-icon" name={following ? "user-plus" : "user"} />
                             </button>
