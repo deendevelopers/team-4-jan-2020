@@ -2,11 +2,15 @@
 
 .home {
 
+    &__logo {
+        height: auto;
+        width: pxrem(75px);
+    }
+
     &__title {
 
         font-weight: bold;
         font-size: pxrem(32px);
-        margin: 0 0 pxrem(30px) 0;
 
         & > span {
 

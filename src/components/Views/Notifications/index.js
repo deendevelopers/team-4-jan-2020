@@ -36,21 +36,21 @@ export default class Notifications extends BaseViewComponent {
             },
             events: [
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=1',
                     title: 'Understanding Hadith and Fiqh',
                     location: 'London',
                     date: 'Thu 31st Dec - 1pm',
                     unread: true
                 },
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=2',
                     title: 'The Fiqh of Salaah and Ibaadah',
                     location: 'Birmingham',
                     date: 'Mon 13th Feb - 12noon',
                     unread: false
                 },
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=3',
                     title: 'A Deep Dive into Business in Islam',
                     location: 'West London',
                     date: 'Tue 7th Jan - 1pm - 5pm',
