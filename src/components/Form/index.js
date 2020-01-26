@@ -12,6 +12,7 @@ export default class Form extends preact.Component {
     constructor(props) {
         super(props);
 
+        console.log(props);
         // Create the default form data values
 
         const formData = {};
@@ -266,7 +267,7 @@ export default class Form extends preact.Component {
         } else if (field.type == 'submit') {
             return (
                 <div className={classes.join(' ')}>
-                    <button className="button button--blue button--block" type="submit">
+                    <button className="button button--green button--block" type="submit">
                         {(this.state.loading) ? '' : field.label}
                         {this.state.loading &&
                             <Loading size="small" />
@@ -445,6 +446,8 @@ export default class Form extends preact.Component {
         }
 
         // Send data to endpoint
+        console.log(method);
+        console.log(this.props.action);
 
         new RequestService(method, this.props.action, this.state.formData, (response) => {
             this.handleResponse(response, form);
@@ -463,6 +466,8 @@ export default class Form extends preact.Component {
         return (
             <form className={classes.join(' ')} onSubmit={e => this.handleForm(e)} noValidate>
                 {fields.map(field => this.field(field))}
+
+                
             </form>
         );
     }
