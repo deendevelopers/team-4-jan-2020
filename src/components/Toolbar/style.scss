@@ -7,6 +7,7 @@
     $parent: &;
 
     background-color: $color-white;
+    box-shadow: 0 0 pxrem(10px) rgba(0, 0, 0, 0.33);
     height: pxrem(55px);
     height: calc(#{pxrem(55px)} + constant(safe-area-inset-top));
     height: calc(#{pxrem(55px)} + env(safe-area-inset-top));
@@ -64,6 +65,7 @@
 
         @include ellipsis;
         font-size: pxrem(16px);
+        font-weight: bold;
         text-align: center;
         position: relative;
         width: 50%;

@@ -1,10 +1,12 @@
 import preact from 'preact';
 import BaseViewComponent from '../../BaseViewComponent';
+import GlobalsService from '../../../services/GlobalsService';
 import ViewService from '../../../services/ViewService';
 import Toolbar from '../../Toolbar';
 import Form from '../../Form';
+import './style.scss';
 
-export default class Profile extends BaseViewComponent {
+export default class Interests extends BaseViewComponent {
     constructor() {
         super();
 
@@ -22,36 +24,10 @@ export default class Profile extends BaseViewComponent {
             rightBtn: {
                 icon: 'save',
                 callback() {
-                    ViewService.goBack('profile');
+                    console.log('This will save the form details');
                 }
             }
         };
-
-        // The form fields
-
-        this.fields = [
-            {
-                name: 'f_email',
-                type: 'email',
-                label: 'Email',
-                placeholder: 'jane.doe@email.com',
-                value: 'adam.sheikh@gmail.com'
-            },
-            {
-                name: 'f_first_name',
-                type: 'text',
-                label: 'First name',
-                placeholder: 'Jane',
-                value: 'Adam'
-            },
-            {
-                name: 'f_last_name',
-                type: 'text',
-                label: 'Last name',
-                placeholder: 'Doe',
-                value: 'Sheikh'
-            }
-        ];
     }
 
     render(props, { id, title, leftBtn, rightBtn }) {
@@ -59,7 +35,7 @@ export default class Profile extends BaseViewComponent {
             <div id={id} className="profile view back view--toolbar">
                 <Toolbar title={title} leftBtn={leftBtn} rightBtn={rightBtn} />
                 <div className="view__container">
-                    <Form action="/profile" method="PUT" fields={this.fields} auth />
+                    <Form action="/profile" method="PUT" onSuccess={this.handleSubmit} fields={this.fields} auth />
                 </div>
             </div>
         );
