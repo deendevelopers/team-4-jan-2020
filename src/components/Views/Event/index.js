@@ -14,7 +14,7 @@ export default class Event extends BaseViewComponent {
             id: 'event',
             title: 'Event',
             view: 'Event',
-            backable: false,
+            backable: true,
             slidable: false,
             eventDetails: {
                 eventId: 1232,
@@ -68,7 +68,7 @@ export default class Event extends BaseViewComponent {
 
     render(props, { id, title, eventDetails, attending, following, leftBtn}) {
         return (
-            <div id={id} className="event-page view view--bars">
+            <div id={id} className="event-page view back view--bars">
                 <Toolbar title={title} leftBtn={leftBtn} />
 
                 <div className="view__container">
