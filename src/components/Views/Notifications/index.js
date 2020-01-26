@@ -16,7 +16,7 @@ export default class Notifications extends BaseViewComponent {
 
         this.state = {
             id: 'notifications',
-            title: 'Notifications',
+            title: 'Activity',
             view: 'Notifications',
             backable: false,
             slidable: false,
