@@ -6,6 +6,7 @@ import NoInternet from './NoInternet';
 import Event from './Event';
 import Notifications from './Notifications';
 import Password from './Password';
+import Organiser from './Organiser';
 
 export default {
     Home,
@@ -15,5 +16,6 @@ export default {
     NoInternet,
     Notifications,
     Password,
-    Event
+    Event,
+    Organiser
 };
