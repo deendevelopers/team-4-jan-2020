@@ -1,0 +1,65 @@
+@import '../../assets/scss/functions';
+@import '../../assets/scss/variables';
+
+.button {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: $transition-speed;
+    padding: pxrem(12px) pxrem(15px);
+    border: 0 none;
+    color: $color-white;
+    border-radius: $structure-border-radius;
+    font-weight: bold;
+    font-size: pxrem(16px);
+    text-align: center;
+    cursor: pointer;
+
+    &[disabled] {
+        background-color: $color-gray-600;
+    }
+
+    &--link {
+        text-decoration: none;
+        padding: pxrem(8px) pxrem(14px) pxrem(7px) pxrem(14px);
+        display: inline-block;
+    }
+
+    &--green {
+
+        background-color: $color-green;
+
+        &:hover, &:active {
+            background-color: darken($color-green, 15%);
+        }
+
+    }
+
+    &--red {
+
+        background-color: $color-red;
+
+        &:hover, &:active {
+            background-color: darken($color-red, 15%);
+        }
+
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    &--small {
+        padding: pxrem(6px) pxrem(12px) pxrem(5px) pxrem(12px);
+    }
+
+    &--inline {
+        display: inline-block;
+    }
+
+    &--shadow {
+        box-shadow: 0 pxrem(5px) pxrem(15px) $color-shadow-light;
+    }
+
+}

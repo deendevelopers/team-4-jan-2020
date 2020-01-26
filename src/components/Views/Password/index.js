@@ -4,25 +4,25 @@ import ViewService from '../../../services/ViewService';
 import Toolbar from '../../Toolbar';
 import Form from '../../Form';
 
-export default class Profile extends BaseViewComponent {
+export default class Password extends BaseViewComponent {
     constructor() {
         super();
 
         this.state = {
-            id: 'profile',
-            title: 'Profile',
-            view: 'Profile',
+            id: 'password',
+            title: 'Password',
+            view: 'Password',
             backable: true,
             slidable: false,
             leftBtn: {
-                id: 'profile',
+                id: 'password',
                 icon: 'chevron-left',
                 back: true
             },
             rightBtn: {
                 icon: 'save',
                 callback() {
-                    ViewService.goBack('profile');
+                    ViewService.goBack('password');
                 }
             }
         };
@@ -31,35 +31,30 @@ export default class Profile extends BaseViewComponent {
 
         this.fields = [
             {
-                name: 'f_email',
-                type: 'email',
-                label: 'Email',
-                placeholder: 'jane.doe@email.com',
-                value: 'adam.sheikh@gmail.com'
+                name: 'f_current_password',
+                type: 'password',
+                label: 'Current password'
             },
             {
-                name: 'f_first_name',
-                type: 'text',
-                label: 'First name',
-                placeholder: 'Jane',
-                value: 'Adam'
+                name: 'f_new_password',
+                type: 'password',
+                label: 'New password',
+                description: 'Minimum 8 characters long'
             },
             {
-                name: 'f_last_name',
-                type: 'text',
-                label: 'Last name',
-                placeholder: 'Doe',
-                value: 'Sheikh'
+                name: 'f_confirm_password',
+                type: 'password',
+                label: 'Confirm password'
             }
         ];
     }
 
     render(props, { id, title, leftBtn, rightBtn }) {
         return (
-            <div id={id} className="profile view back view--toolbar">
+            <div id={id} className="password view back view--toolbar">
                 <Toolbar title={title} leftBtn={leftBtn} rightBtn={rightBtn} />
                 <div className="view__container">
-                    <Form action="/profile" method="PUT" fields={this.fields} auth />
+                    <Form action="/password" method="PUT" fields={this.fields} auth />
                 </div>
             </div>
         );

@@ -25,15 +25,27 @@ html {
 
 body {
     font-size: pxrem(14px);
-    font-family: $font-stack-default;
     line-height: 1.5;
-    color: $font-color-default;
-    padding: 0;
-    margin: 0;
 }
 
 a, button {
     outline: 0 none;
+}
+
+@for $i from 1 to 10 {
+
+    .text-gray-#{$i}00 {
+        color: nth(nth($grays, $i), 2);
+    }
+
+    .bg-gray-#{$i}00 {
+        background-color: nth(nth($grays, $i), 2);
+    }
+
+    .border-gray-#{$i}00 {
+        border-color: nth(nth($grays, $i), 2);
+    }
+
 }
 
 #global-loading {
