@@ -66,7 +66,7 @@ export default class Organiser extends BaseViewComponent {
 
                     <div className="organiser-page">
 
-                        <h1 className="home__subtitle h2 text-uppercase text-gray-500 mb-3 mx-4">{organiserDetails.name}</h1>
+                        <h1 className="home__subtitle h2 text-uppercase text-primary mb-3 mx-4">{organiserDetails.name}</h1>
                         <button onClick={() => this.follow()}  type="button" className="btn btn-primary event-page__follow-organisation">{ following ? 'Follow ' : 'Following ' }
                             <Icon className="event-page__follow-icon" name={following ? "user-plus" : "user"} />
                         </button>
