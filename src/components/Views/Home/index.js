@@ -58,7 +58,7 @@ export default class Home extends BaseViewComponent {
             <div id={id} className="home view view--bars">
                 <Toolbar title={title} rightBtn={rightBtn} />
                 <div className="view__container">
-                    <div className="home__wrapper py-5 px-4">
+                    <div className="home__wrapper px-4">
                         <h1 className="home__title text-center m-0">
                             <img className="home__logo" alt="IlmEvents" src={require('./logo.png')} />
                             <span className="d-block">

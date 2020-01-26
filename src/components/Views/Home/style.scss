@@ -7,6 +7,11 @@
         width: pxrem(75px);
     }
 
+    &__wrapper {
+        padding-top: pxrem(27px);
+        padding-bottom: pxrem(27px);
+    }
+
     &__title {
 
         font-weight: bold;
