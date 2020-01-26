@@ -21,6 +21,10 @@ export default class Home extends BaseViewComponent {
                 id: 'Settings',
                 icon: 'settings'
             },
+            leftBtn: {
+                id: 'Map',
+                icon: 'map'
+            },
             events: [
                 {
                     thumb: 'https://picsum.photos/200?random=1',
@@ -49,16 +53,15 @@ export default class Home extends BaseViewComponent {
 
         Useful.loading('hide');
     }
-
-
     navigateToEventPage() {
         ViewService.open('Event');
     }
 
-    render(props, { id, title, rightBtn, events }) {
+  
+    render(props, { id, title, rightBtn, leftBtn, events }) {
         return (
             <div id={id} className="home view view--bars">
-                <Toolbar title={title} rightBtn={rightBtn} />
+                <Toolbar title={title} rightBtn={rightBtn} leftBtn={leftBtn} />
                 <div className="view__container">
                     <div className="home__wrapper px-4">
                         <h1 className="home__title text-center m-0">

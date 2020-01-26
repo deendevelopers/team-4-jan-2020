@@ -7,6 +7,7 @@ import '../assets/scss/main.scss';
 
 // Initialize the app and fire cordova deviceready event
 
+
 const onDeviceReady = (devicePlatform) => {
     preact.render(<App />, document.getElementById('app'));
 
