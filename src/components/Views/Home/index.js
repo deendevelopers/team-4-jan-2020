@@ -26,13 +26,15 @@ export default class Home extends BaseViewComponent {
                     thumb: 'https://picsum.photos/200?random=1',
                     title: 'Understanding Hadith and Fiqh',
                     location: 'London',
-                    date: 'Thu 31st Dec - 1pm'
+                    date: 'Thu 31st Dec - 1pm',
+                    meetup: true
                 },
                 {
                     thumb: 'https://picsum.photos/200?random=2',
                     title: 'The Fiqh of Salaah and Ibaadah',
                     location: 'Birmingham',
-                    date: 'Mon 13th Feb - 12noon'
+                    date: 'Mon 13th Feb - 12noon',
+                    meetup: true
                 },
                 {
                     thumb: 'https://picsum.photos/200?random=3',

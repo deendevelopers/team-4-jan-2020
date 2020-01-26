@@ -10,7 +10,7 @@ export default class List extends preact.Component {
                         <a className="list__item d-block" onClick={() => onClick()}>
                             <div className="row no-gutters align-items-stretch">
                                 <div className="col-3">
-                                    <div className="list__thumb" style={{ backgroundImage: `url('${item.thumb}')` }} />
+                                    <div className={`list__thumb${(item.meetup) ? ' list__thumb--meetup' : ''}`} style={{ backgroundImage: `url('${item.thumb}')` }} />
                                 </div>
                                 <div className="col-9">
                                     <div className="list__content">

@@ -4,9 +4,25 @@
 .list {
 
     &__thumb {
+
         background-position: center;
         background-size: cover;
         height: 100%;
+        position: relative;
+
+        &--meetup:after {
+            content: "";
+            background-image: url('./meetup-icon.png');
+            background-position: center;
+            background-size: contain;
+            display: block;
+            height: pxrem(18px);
+            width: pxrem(18px);
+            position: absolute;
+            bottom: pxrem(3px);
+            left: pxrem(3px);
+        }
+
     }
 
     &__content {
