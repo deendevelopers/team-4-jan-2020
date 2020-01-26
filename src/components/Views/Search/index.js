@@ -60,8 +60,7 @@ export default class Search extends BaseViewComponent {
 
     handleSubmitButtonClick() {
         // redirect to map page
-        console.log('fired handleSubmitButtonClick');
-
+        ViewService.open('Home');
     }
 
     render(props, { id, title, rightBtn }) {
@@ -70,12 +69,9 @@ export default class Search extends BaseViewComponent {
                 <Toolbar title={title} rightBtn={rightBtn} />
                 <div className="view__container">
                     <Form id="searchForm" action="/home" method="GET" fields={this.fields} />
-                    
                     <div id="submit-button" className="form__field form__field--submit">
                         <button onClick={() => this.handleSubmitButtonClick()}className="button button--green button--block" type="submit">Search</button>
                     </div>
-
-
                 </div>
                 <NavBar selected={id} />
             </div>
