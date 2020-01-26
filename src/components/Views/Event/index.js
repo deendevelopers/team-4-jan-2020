@@ -108,7 +108,7 @@ export default class Event extends BaseViewComponent {
                         </div>
 
                         {/*<button onClick={() => this.log()} type="button" className="btn btn-outline-primary">*/}
-                        <button onClick={() => this.log()} type="button" className={attending ? 'btn btn-outline-primary' : 'btn btn-outline-warning'}>
+                        <button onClick={() => this.log()} type="button" className={attending ? 'btn btn-outline-primary event-page__attendingBtn' : 'btn btn-outline-warning event-page__attendingBtn'}>
                         {attending ? 'Attending' : 'Not attending'}
                         </button>
 
