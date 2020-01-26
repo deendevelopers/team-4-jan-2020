@@ -32,6 +32,10 @@ a, button {
     outline: 0 none;
 }
 
+a {
+    text-decoration: none;
+}
+
 @for $i from 1 to 10 {
 
     .text-gray-#{$i}00 {

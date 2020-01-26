@@ -1,4 +1,5 @@
 import preact from 'preact';
+import $ from 'cash-dom';
 import BaseViewComponent from '../../BaseViewComponent';
 import Useful from '../../../helpers/Useful';
 import Toolbar from '../../Toolbar';
@@ -11,6 +12,8 @@ export default class Notifications extends BaseViewComponent {
     constructor() {
         super();
 
+        const self = this;
+
         this.state = {
             id: 'notifications',
             title: 'Notifications',
@@ -20,7 +23,15 @@ export default class Notifications extends BaseViewComponent {
             rightBtn: {
                 icon: 'check-square',
                 callback() {
-                    console.log('This will mark all as read');
+                    const newEvents = [];
+                    $.each(self.state.events, (i, event) => {
+                        const eventItem = event;
+                        eventItem.unread = false;
+                        newEvents.push(eventItem);
+                    });
+                    self.setState({
+                        events: newEvents
+                    });
                 }
             },
             events: [
@@ -28,19 +39,22 @@ export default class Notifications extends BaseViewComponent {
                     thumb: 'https://via.placeholder.com/150',
                     title: 'Understanding Hadith and Fiqh',
                     location: 'London',
-                    date: 'Thu 31st Dec - 1pm'
+                    date: 'Thu 31st Dec - 1pm',
+                    unread: true
                 },
                 {
                     thumb: 'https://via.placeholder.com/150',
                     title: 'The Fiqh of Salaah and Ibaadah',
                     location: 'Birmingham',
-                    date: 'Mon 13th Feb - 12noon'
+                    date: 'Mon 13th Feb - 12noon',
+                    unread: false
                 },
                 {
                     thumb: 'https://via.placeholder.com/150',
                     title: 'A Deep Dive into Business in Islam',
                     location: 'West London',
-                    date: 'Tue 7th Jan - 1pm - 5pm'
+                    date: 'Tue 7th Jan - 1pm - 5pm',
+                    unread: true
                 }
             ]
         };
@@ -63,7 +77,7 @@ export default class Notifications extends BaseViewComponent {
                         <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                 </div>
-                <NavBar />
+                <NavBar selected="notifications" />
             </div>
         );
     }
