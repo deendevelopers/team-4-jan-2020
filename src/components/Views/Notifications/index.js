@@ -6,6 +6,7 @@ import Toolbar from '../../Toolbar';
 import NavBar from '../../NavBar';
 import List from '../../List';
 import './style.scss';
+import ViewService from '../../../services/ViewService';
 
 export default class Notifications extends BaseViewComponent {
     constructor() {
@@ -15,7 +16,7 @@ export default class Notifications extends BaseViewComponent {
 
         this.state = {
             id: 'notifications',
-            title: 'Notifications',
+            title: 'Activity',
             view: 'Notifications',
             backable: false,
             slidable: false,
@@ -35,21 +36,21 @@ export default class Notifications extends BaseViewComponent {
             },
             events: [
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=1',
                     title: 'Understanding Hadith and Fiqh',
                     location: 'London',
                     date: 'Thu 31st Dec - 1pm',
                     unread: true
                 },
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=2',
                     title: 'The Fiqh of Salaah and Ibaadah',
                     location: 'Birmingham',
                     date: 'Mon 13th Feb - 12noon',
                     unread: false
                 },
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=3',
                     title: 'A Deep Dive into Business in Islam',
                     location: 'West London',
                     date: 'Tue 7th Jan - 1pm - 5pm',
@@ -63,16 +64,20 @@ export default class Notifications extends BaseViewComponent {
         Useful.loading('hide');
     }
 
+    navigateToEventPage() {
+        ViewService.open('Event');
+    }
+
     render(props, { id, title, rightBtn, events }) {
         return (
             <div id={id} className="notifications view view--bars">
                 <Toolbar title={title} rightBtn={rightBtn} />
                 <div className="view__container">
                     <div className="notifications__items">
-                        <List items={events} />
+                        <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                 </div>
-                <NavBar selected="notifications" />
+                <NavBar selected={id} />
             </div>
         );
     }

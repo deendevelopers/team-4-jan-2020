@@ -44,7 +44,8 @@
 
             a:hover svg,
             &.is-selected a .feather-icon svg {
-                stroke-width: 2.5;
+                stroke-width: 2;
+                stroke: $color-green;
             }
 
             &[data-badge]::before {

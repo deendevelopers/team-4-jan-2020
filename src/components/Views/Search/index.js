@@ -14,7 +14,7 @@ export default class Search extends BaseViewComponent {
             id: 'search',
             title: 'Event Search',
             view: 'Search',
-            backable: true,
+            backable: false,
             slidable: false,
             rightBtn: {
                 icon: 'search',

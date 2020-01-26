@@ -2,12 +2,12 @@ import preact from 'preact';
 import './style.scss';
 
 export default class List extends preact.Component {
-    render({ items }) {
+    render({ items, onClick }) {
         return (
             <ul className="list list-unstyled border-top m-0">
                 {items.map(item => (
                     <li className="border-bottom">
-                        <a href="javascript:;" className="list__item d-block">
+                        <a className="list__item d-block" onClick={() => onClick()}>
                             <div className="row no-gutters align-items-stretch">
                                 <div className="col-3">
                                     <div className="list__thumb" style={{ backgroundImage: `url('${item.thumb}')` }} />
@@ -18,7 +18,7 @@ export default class List extends preact.Component {
                                         <p className="list__meta text-truncate small m-0">
                                             <span className="text-gray-600">{ item.location }</span>
                                             <span className="text-gray-300 d-inline-block mx-2">|</span>
-                                            <span className="text-success">{ item.date }</span>
+                                            <span className="text-primary">{ item.date }</span>
                                         </p>
                                     </div>
                                 </div>

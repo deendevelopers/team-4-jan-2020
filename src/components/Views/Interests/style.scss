@@ -1,0 +1,22 @@
+
+.interests {
+
+    .form {
+        padding-bottom: 0;
+    }
+
+    &__mine {
+
+        li {
+
+            background-color: lighten(#56c16f, 40%);
+
+            svg {
+                stroke-width: 2.5;
+            }
+
+        }
+
+    }
+
+}
