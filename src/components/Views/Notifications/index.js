@@ -16,7 +16,7 @@ export default class Notifications extends BaseViewComponent {
 
         this.state = {
             id: 'notifications',
-            title: 'Notifications',
+            title: 'Activity',
             view: 'Notifications',
             backable: false,
             slidable: false,
@@ -77,7 +77,7 @@ export default class Notifications extends BaseViewComponent {
                         <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                 </div>
-                <NavBar selected="notifications" />
+                <NavBar selected={id} />
             </div>
         );
     }
