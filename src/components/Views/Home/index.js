@@ -74,7 +74,7 @@ export default class Home extends BaseViewComponent {
                         <List items={events} />
                     </div>
                 </div>
-                <NavBar />
+                <NavBar selected="home" />
             </div>
         );
     }

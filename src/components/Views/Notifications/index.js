@@ -72,7 +72,7 @@ export default class Notifications extends BaseViewComponent {
                         <List items={events} />
                     </div>
                 </div>
-                <NavBar />
+                <NavBar selected="notifications" />
             </div>
         );
     }
