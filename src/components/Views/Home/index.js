@@ -20,6 +20,10 @@ export default class Home extends BaseViewComponent {
                 id: 'Settings',
                 icon: 'settings'
             },
+            leftBtn: {
+                id: 'Map',
+                icon: 'map'
+            },
             events: [
                 {
                     thumb: 'https://via.placeholder.com/150',
@@ -47,10 +51,10 @@ export default class Home extends BaseViewComponent {
         Useful.loading('hide');
     }
 
-    render(props, { id, title, rightBtn, events }) {
+    render(props, { id, title, rightBtn, leftBtn, events }) {
         return (
             <div id={id} className="home view view--bars">
-                <Toolbar title={title} rightBtn={rightBtn} />
+                <Toolbar title={title} rightBtn={rightBtn} leftBtn={leftBtn} />
                 <div className="view__container">
                     <div className="home__wrapper py-5 px-4">
                         <h1 className="home__title m-0">
