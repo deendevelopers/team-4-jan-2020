@@ -5,6 +5,7 @@ import Toolbar from '../../Toolbar';
 import NavBar from '../../NavBar';
 import List from '../../List';
 import './style.scss';
+import ViewService from '../../../services/ViewService';
 
 export default class Home extends BaseViewComponent {
     constructor() {
@@ -47,6 +48,11 @@ export default class Home extends BaseViewComponent {
         Useful.loading('hide');
     }
 
+
+    navigateToEventPage() {
+        ViewService.open('Event');
+    }
+
     render(props, { id, title, rightBtn, events }) {
         return (
             <div id={id} className="home view view--bars">
@@ -63,15 +69,15 @@ export default class Home extends BaseViewComponent {
                     </div>
                     <div className="home__events">
                         <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Your events</h2>
-                        <List items={events} />
+                        <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                     <div className="home__events my-5">
                         <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Local events</h2>
-                        <List items={events} />
+                        <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                     <div className="home__events mt-5 mb-7">
                         <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Latest events</h2>
-                        <List items={events} />
+                        <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                 </div>
                 <NavBar />

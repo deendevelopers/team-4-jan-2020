@@ -11,9 +11,9 @@ export default class Event extends BaseViewComponent {
         super();
 
         this.state = {
-            id: 'profile',
-            title: 'Profile',
-            view: 'Profile',
+            id: 'event',
+            title: 'Event',
+            view: 'Event',
             backable: false,
             slidable: false,
             eventDetails: {
@@ -26,15 +26,20 @@ export default class Event extends BaseViewComponent {
                 timeFinish: '18:00',
                 posterUrl: 'https://i.imgur.com/r56wn2l.png',
                 description: 'Muslamic Makers & Deen Developers invite you to a weekend to use your skills for good and bring Islamic education into the 21st Century with technology.',
-                attendees: ['UserA', 'UserB', 'UserC', 'UserD'],
+                attendees: ['Keanu Reeves', 'Morgan Freeman', 'Mo Salah', 'Dave Chapelle'],
                 discussion: [
-                    { user: 'UserA', message: 'Is there a prayer space available?' },
-                    { user: 'UserB', message: 'How much is parking?' }
+                    { user: 'Donald Trump', message: 'Is there a prayer space available?' },
+                    { user: 'BoJo', message: 'How much is parking?' }
                 ],
                 tags: ['#men', '#women', '#freefood']
             },
             attending: false,
-            following: false
+            following: false,
+            leftBtn: {
+                id: 'event',
+                icon: 'chevron-left',
+                back: true
+            }
         };
     }
 
@@ -46,20 +51,31 @@ export default class Event extends BaseViewComponent {
         this.setState({ following : !this.state.following });
     }
 
-    render(props, { id, title, eventDetails, attending, following}) {
+    keyPressed(event) {
+        // console.log('THIS', this.state)
+
+        // if (event.key === "Enter") {
+        //     console.log('enter')
+        //
+        //     this.setState({ eventDetails: {...this.state.eventDetails ] })
+        // }
+    }
+
+
+    render(props, { id, title, eventDetails, attending, following, leftBtn}) {
         return (
             <div id={id} className="event-page view view--bars">
-                {/*<Toolbar/>*/}
+                <Toolbar title={title} leftBtn={leftBtn} />
 
                 <div className="view__container">
                     <div>
 
-                        <div className="event-page__organiser-header">
-                            <span >{eventDetails.name}</span>
+                        <div className="event-page__event-name-header">
+                            <span>{eventDetails.name}</span>
                         </div>
 
                         <div className="event-page__organiser-header">
-                            <span>{eventDetails.organiser}</span>
+                            <span className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">{eventDetails.organiser}</span>
                             <button onClick={() => this.follow()}  type="button" className="btn btn-primary event-page__follow-organisation">{ following ? 'Follow ' : 'Following ' }
                             <Icon className="event-page__follow-icon" name={following ? "user-plus" : "user"} />
                             </button>
@@ -73,6 +89,8 @@ export default class Event extends BaseViewComponent {
                             {eventDetails.tags.map(tag => (
                                 <button type="button" className="btn btn-outline-success event-page__tag">{tag}</button>
                             ))}
+                            <Icon name="share-2" />
+
                         </div>
 
                         <div className='event-page__description'>
@@ -80,12 +98,12 @@ export default class Event extends BaseViewComponent {
                         </div>
 
                         <div className='event-page__core-details'>
-                            <span>Date: </span>
+                            <span><b>Date:</b> </span>
                             <span>{eventDetails.dateStart}</span>
                         </div>
 
                         <div className='event-page__core-details'>
-                            <span>Time: </span>
+                            <span><b>Time:</b> </span>
                             <span>{eventDetails.timeStart} - {eventDetails.timeFinish}</span>
                         </div>
 
@@ -96,7 +114,7 @@ export default class Event extends BaseViewComponent {
 
 
                         <div className='event-page__attendees'>
-                            <div><u>Attendees (54):</u></div>
+                            <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Attendees (54):</h2>
                             {eventDetails.attendees.length > 0 && eventDetails.attendees.map(userName => (
                                 <div>
                                     <Icon name="user" />
@@ -111,7 +129,7 @@ export default class Event extends BaseViewComponent {
 
 
                         <div className='event-page__discussion'>
-                            <span><u>Join the discussion...</u></span>
+                            <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Join the discussion...</h2>
 
                             {eventDetails.discussion.length > 0 &&
                             eventDetails.discussion.map(comment => (
@@ -127,7 +145,7 @@ export default class Event extends BaseViewComponent {
                                 </div>
                             }
 
-                            <input placeholder="type a message here"></input>
+                            <input className="event-page__input" placeholder="type a message here..."  onKeyPress={() => this.keyPressed()}></input>
 
                         </div>
 

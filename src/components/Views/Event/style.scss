@@ -4,8 +4,8 @@
 
     // TODO make responsive rem
     &__poster {
-        width: 300px;
-        height: 300px;
+        width: 25rem;
+        height: 25rem;
     }
 
     &__core-details {
@@ -14,36 +14,46 @@
     }
 
     &__attendees {
-        margin: 20px 0px;
+        margin: 3rem 0rem;
     }
 
     &__description {
-        margin: 20px 0px;
+        margin: 1rem 0rem;
     }
 
     &__discussion {
-        margin: 30px 0px;
+        margin: 1.5rem 0rem;
     }
 
     &__comment {
         text-align: left;
-        margin: 0px 20px;
+        margin: 0rem 1rem;
+    }
+
+    &__event-name-header {
+        margin: 0.5rem 0rem;
+        font-size: 2rem;
     }
 
     &__organiser-header {
-        margin: 10px 0px;
+        margin: 0.5rem 0rem;
+        font-size: 1.5rem;
     }
 
     &__tag {
-        margin: 10px 5px;
+        margin: 1rem 0.25rem;
     }
 
     &__follow-organisation {
-        margin-left: 10px;
+        margin-left: 0.5rem;
     }
 
     &__follow-icon {
-        margin-left: 5px;
+        margin-left: 0.25rem;
+    }
+
+    &__input {
+        margin-top: 1rem;
     }
 
 }

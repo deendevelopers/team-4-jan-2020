@@ -2,11 +2,12 @@ import preact from 'preact';
 import './style.scss';
 
 export default class List extends preact.Component {
-    render({ items }) {
+
+    render({ items, onClick }) {
         return (
             <ul className="list list-unstyled border-top m-0">
                 {items.map(item => (
-                    <li className="border-bottom">
+                    <li className="border-bottom" onClick={() => onClick()}>
                         <a href="javascript:;" className="d-block">
                             <div className="row no-gutters align-items-stretch">
                                 <div className="col-3">

@@ -5,6 +5,7 @@ import Toolbar from '../../Toolbar';
 import NavBar from '../../NavBar';
 import List from '../../List';
 import './style.scss';
+import ViewService from '../../../services/ViewService';
 
 export default class Notifications extends BaseViewComponent {
     constructor() {
@@ -49,13 +50,17 @@ export default class Notifications extends BaseViewComponent {
         Useful.loading('hide');
     }
 
+    navigateToEventPage() {
+        ViewService.open('Event');
+    }
+
     render(props, { id, title, rightBtn, events }) {
         return (
             <div id={id} className="notifications view view--bars">
                 <Toolbar title={title} rightBtn={rightBtn} />
                 <div className="view__container">
                     <div className="notifications__items">
-                        <List items={events} />
+                        <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                 </div>
                 <NavBar />
