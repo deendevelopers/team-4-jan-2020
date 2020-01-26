@@ -167,6 +167,12 @@ export default class Event extends BaseViewComponent {
                         }
 
 
+                        <div className="event-page__flag-container">
+                            <Icon className="event-page__flag text-gray-500" name="flag" />
+                            <span className="event-page__flag-text text-gray-500 ">Flag this event</span>
+                        </div>
+
+
 
                     </div>
                 </div>
