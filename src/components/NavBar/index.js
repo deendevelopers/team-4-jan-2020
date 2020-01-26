@@ -14,10 +14,10 @@ export default class NavBar extends preact.Component {
                     <li className={`view-search${(selected == 'search') ? ' is-selected' : ''}`}>
                         <a onClick={() => ViewService.open('Search')}><Icon name="search" /></a>
                     </li>
-                    <li className={`view-notifications${(selected == '') ? ' is-selected' : ''}`}>
-                        <a onClick={() => ViewService.open('Notifications')}><Icon name="bell" /></a>
+                    <li className={`view-notifications${(selected == 'notifications') ? ' is-selected' : ''}`}>
+                        <a onClick={() => ViewService.open('Notifications')}><Icon name="star" /></a>
                     </li>
-                    <li className={`view-add-event${(selected == '') ? ' is-selected' : ''}`}>
+                    <li className={`view-add-event${(selected == 'add-event') ? ' is-selected' : ''}`}>
                         <a onClick={() => ViewService.open('AddEvent')}><Icon name="plus-circle" /></a>
                     </li>
                 </ul>

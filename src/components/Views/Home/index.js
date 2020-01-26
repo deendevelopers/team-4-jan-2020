@@ -5,6 +5,7 @@ import Toolbar from '../../Toolbar';
 import NavBar from '../../NavBar';
 import List from '../../List';
 import './style.scss';
+import ViewService from '../../../services/ViewService';
 
 export default class Home extends BaseViewComponent {
     constructor() {
@@ -26,19 +27,19 @@ export default class Home extends BaseViewComponent {
             },
             events: [
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=1',
                     title: 'Understanding Hadith and Fiqh',
                     location: 'London',
                     date: 'Thu 31st Dec - 1pm'
                 },
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=2',
                     title: 'The Fiqh of Salaah and Ibaadah',
                     location: 'Birmingham',
                     date: 'Mon 13th Feb - 12noon'
                 },
                 {
-                    thumb: 'https://via.placeholder.com/150',
+                    thumb: 'https://picsum.photos/200?random=3',
                     title: 'A Deep Dive into Business in Islam',
                     location: 'West London',
                     date: 'Tue 7th Jan - 1pm - 5pm'
@@ -50,15 +51,19 @@ export default class Home extends BaseViewComponent {
 
         Useful.loading('hide');
     }
+    navigateToEventPage() {
+        ViewService.open('Event');
+    }
 
+  
     render(props, { id, title, rightBtn, leftBtn, events }) {
         return (
             <div id={id} className="home view view--bars">
                 <Toolbar title={title} rightBtn={rightBtn} leftBtn={leftBtn} />
                 <div className="view__container">
-                    <div className="home__wrapper py-5 px-4">
-                        <h1 className="home__title m-0">
-                            <span className="text-uppercase d-block mb-2">Welcome to</span>
+                    <div className="home__wrapper px-4">
+                        <h1 className="home__title text-center m-0">
+                            <img className="home__logo" alt="IlmEvents" src={require('./logo.png')} />
                             <span className="d-block">
                                 <span>Ilm</span>
                                 <span className="text-primary">Events</span>
@@ -67,18 +72,18 @@ export default class Home extends BaseViewComponent {
                     </div>
                     <div className="home__events">
                         <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Your events</h2>
-                        <List items={events} />
+                        <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                     <div className="home__events my-5">
                         <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Local events</h2>
-                        <List items={events} />
+                        <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                     <div className="home__events mt-5 mb-7">
                         <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Latest events</h2>
-                        <List items={events} />
+                        <List items={events} onClick={this.navigateToEventPage} />
                     </div>
                 </div>
-                <NavBar />
+                <NavBar selected={id} />
             </div>
         );
     }

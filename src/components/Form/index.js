@@ -11,9 +11,7 @@ import './style.scss';
 export default class Form extends preact.Component {
     constructor(props) {
         super(props);
-
         // Create the default form data values
-
         const formData = {};
 
         props.fields.forEach((field) => {
@@ -266,7 +264,7 @@ export default class Form extends preact.Component {
         } else if (field.type == 'submit') {
             return (
                 <div className={classes.join(' ')}>
-                    <button className="button button--blue button--block" type="submit">
+                    <button className="button button--green button--block" type="submit">
                         {(this.state.loading) ? '' : field.label}
                         {this.state.loading &&
                             <Loading size="small" />
@@ -445,7 +443,6 @@ export default class Form extends preact.Component {
         }
 
         // Send data to endpoint
-
         new RequestService(method, this.props.action, this.state.formData, (response) => {
             this.handleResponse(response, form);
         }, (response) => {

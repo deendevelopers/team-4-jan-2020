@@ -1,0 +1,86 @@
+
+.event-page {
+    text-align: center;
+
+    // TODO make responsive rem
+    &__poster {
+        width: 25rem;
+        height: 25rem;
+    }
+
+    &__core-details {
+        //display: flex;
+        //justify-content: space-evenly;
+    }
+
+    &__attendees {
+        margin: 3rem 0rem;
+    }
+
+    &__attendingBtn {
+        margin-top: 1rem;
+        font-size: 1rem !important;
+        margin-bottom: 3rem !important;
+
+        &--ctaAttend {
+            font-size: 2.5rem !important;
+            margin-bottom: 3rem !important;
+
+        }
+
+    }
+
+    &__description {
+        margin: 1rem 0rem;
+    }
+
+    &__discussion {
+        margin: 1.5rem 0rem;
+    }
+
+    &__comment {
+        text-align: left;
+        margin: 0rem 1rem;
+    }
+
+    &__event-name-header {
+        margin: 0.5rem 0rem;
+        font-size: 2rem;
+    }
+
+    &__organiser-header {
+        margin: 0.5rem 0rem;
+        font-size: 1.5rem;
+    }
+
+    &__tag {
+        margin: 1rem 0.25rem;
+    }
+
+    &__follow-organisation {
+        margin-left: 0.5rem;
+    }
+
+    &__follow-icon {
+        margin-left: 0.25rem;
+    }
+
+    &__input {
+        margin-top: 1rem;
+    }
+
+    &__flag-container {
+        margin-bottom: 3rem !important;
+        text-align: right;
+        margin-right: 2rem;
+    }
+
+    //&__flag {
+    //    margin-right: 3rem !important;
+    //}
+
+    &__flag-text {
+        margin-left: 0.5rem !important;
+    }
+
+}

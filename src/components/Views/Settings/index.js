@@ -25,6 +25,13 @@ export default class Settings extends BaseViewComponent {
 
         this.menu = [
             {
+                title: 'Interests',
+                icon: 'star',
+                callback() {
+                    ViewService.open('Interests');
+                }
+            },
+            {
                 title: 'Profile',
                 icon: 'user',
                 callback() {
