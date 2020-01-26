@@ -1,8 +1,74 @@
+@import '../../../assets/scss/functions';
+@import '../../../assets/scss/variables';
 
 .settings {
 
+    $parent: &;
+
+    &__list {
+        margin: 0;
+        padding: pxrem(25px);
+        list-style-type: none;
+    }
+
+    &__item {
+        border-bottom: 1px solid $color-gray-300;
+    }
+
+    &__link {
+
+        display: block;
+        padding: pxrem(10px) 0;
+
+        #{$parent}__title,
+        #{$parent}__arrow {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    }
+
+    &__arrow {
+
+        float: right;
+        margin-right: pxrem(-8px);
+        margin-top: pxrem(3px);
+
+        svg {
+            height: pxrem(26px);
+            width: pxrem(26px);
+        }
+
+    }
+
     &__title {
+
+        font-size: pxrem(16px);
+
+        span {
+
+            display: inline-block;
+            vertical-align: middle;
+
+            &:first-child {
+
+                margin-right: pxrem(12px);
+
+                svg {
+                    height: pxrem(22px);
+                    width: pxrem(22px);
+                }
+
+            }
+
+        }
+
+    }
+
+    &__version {
         text-align: center;
+        padding: 0 0 pxrem(50px) 0;
+        color: $color-gray-600;
     }
 
 }

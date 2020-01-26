@@ -1,0 +1,19 @@
+@import '../../assets/scss/functions';
+
+.list {
+
+    &__thumb {
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    &__content {
+        padding: pxrem(12px);
+    }
+
+    &__title {
+        font-size: pxrem(16px);
+    }
+
+}
