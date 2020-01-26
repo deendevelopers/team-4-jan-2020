@@ -111,11 +111,6 @@ export default class Event extends BaseViewComponent {
                             <span>{eventDetails.timeStart} - {eventDetails.timeFinish}</span>
                         </div>
 
-                        {/*<button onClick={() => this.log()} type="button" className="btn btn-outline-primary">*/}
-                        <button onClick={() => this.log()} type="button" className={attending ? 'btn btn-outline-primary event-page__attendingBtn' : 'btn btn-outline-warning event-page__attendingBtn'}>
-                        {attending ? 'Attending' : 'Not attending'}
-                        </button>
-
 
                         <div className='event-page__attendees'>
                             <h2 className="home__subtitle h5 text-uppercase text-gray-500 mb-3 mx-4">Attendees (54):</h2>
@@ -152,6 +147,26 @@ export default class Event extends BaseViewComponent {
                             <input className="event-page__input" placeholder="type a message here..."  onKeyPress={() => this.keyPressed()}></input>
 
                         </div>
+
+                        <div>
+                            { attending && <span><b>You are attending</b></span>}
+                        </div>
+
+                        {attending && <button onClick={() => this.log()} type="button"
+                                              className="btn btn-lg btn-outline-warning  event-page__attendingBtn">
+                            Not Attending
+                        </button>
+                        }
+
+
+
+                        {!attending && <button onClick={() => this.log()} type="button"
+                                 className="btn btn-lg  btn-primary event-page__attendingBtn--ctaAttend">
+                            Attend
+                        </button>
+                        }
+
+
 
                     </div>
                 </div>
