@@ -37,7 +37,7 @@
     "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-load-plugins": "^1.5.0",
     "gulp-zip": "^4.1.0",
     "html-webpack-plugin": "^2.26.0",
